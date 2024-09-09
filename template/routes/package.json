@@ -1,0 +1,17 @@
+{
+  "name": "womensafety",
+  "version": "1.0.0",
+  "description": "Women Safety Analytics Project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.0.0",
+    "mongoose": "^5.10.18",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "d3": "^7.0.0"
+  }
+}

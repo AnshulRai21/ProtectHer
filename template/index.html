@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Women Safety Analytics</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="alert-section" class="card">
+      <h2>Alerts</h2>
+      <ul id="alert-list"></ul>
+    </section>
+    <section id="filter-section" class="card">
+      <h2>Filter</h2>
+      <form id="filter-form">
+        <label for="filter-select">Select a filter:</label>
+        <select id="filter-select">
+          <option value="all">All</option>
+          <option value="category1">Category 1</option>
+          <option value="category2">Category 2</option>
+        </select>
+        <button id="filter-btn">Filter</button>
+      </form>
+    </section>
+    <section id="visualization-section" class="card">
+      <h2>Visualization</h2>
+      <div id="visualization-container"></div>
+    </section>
+    <section id="auth-section" class="card">
+      <h2>Authentication</h2>
+      <form id="auth-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button id="auth-btn">Login</button>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
