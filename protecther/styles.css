@@ -1,0 +1,137 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fefefe;
+    padding: 20px 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    color: #333;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    color: #007bff;
+}
+
+.nav-get-help {
+    position: relative;
+}
+
+.get-help-btn {
+    background-color: #3b4da3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.get-help-btn:hover {
+    background-color: #2a3687;
+}
+
+.dropdown-icon {
+    margin-left: 10px;
+}
+
+/* Main content styles */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.text-content {
+    background-color: #374a93;
+    color: white;
+    padding: 40px;
+    max-width: 50%;
+    border-radius: 10px;
+}
+
+.text-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.text-content h3 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.text-content p {
+    font-size: 1em;
+    line-height: 1.8;
+}
+
+.image-content {
+    max-width: 50%;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .text-content, .image-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+}

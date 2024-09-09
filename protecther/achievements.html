@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Our Achievements - ProtectHer</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar Section -->
+    <header>
+        <nav class="bg-white shadow p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <a href="home.html" class="text-2xl font-bold text-blue-900">ProtectHer</a>
+                <ul class="flex space-x-4">
+                    <li><a href="home.html" class="text-gray-700 font-bold uppercase hover:text-blue-900">Home</a></li>
+                    <li class="relative">
+                        <button id="about-us-btn" class="text-gray-700 font-bold uppercase hover:text-blue-900 focus:outline-none flex items-center">
+                            About Us
+                            <i class="fas fa-caret-down ml-2"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 bg-blue-900 text-white rounded-md shadow-lg hidden" id="about-us-dropdown">
+                            <ul>
+                                <li><a href="who-are-we.html" class="block px-4 py-2 text-white hover:bg-blue-800">Who Are We</a></li>
+                                <li><a href="achievements.html" class="block px-4 py-2 text-white hover:bg-blue-800">What Are Our Achievements</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="features.html" class="text-gray-700 font-bold uppercase hover:text-blue-900">Features</a></li>
+                </ul>
+                <div class="relative">
+                    <button class="bg-blue-900 text-white px-4 py-2 rounded-full flex items-center" id="get-help-btn">
+                        <i class="fas fa-hand-paper mr-2"></i>
+                        Get Help
+                        <i class="fas fa-caret-down ml-2"></i>
+                    </button>
+                    <div class="absolute right-0 mt-2 w-48 bg-blue-900 text-white rounded-md shadow-lg hidden" id="dropdown-menu">
+                        <ul>
+                            <li><a href="dial-100.html" class="block px-4 py-2 text-white hover:bg-blue-800">Dial 100</a></li>
+                            <li><a href="be-safe.html" class="block px-4 py-2 text-white hover:bg-blue-800">Be Safe</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <section class="container mx-auto flex flex-col md:flex-row items-center justify-between py-16 px-4">
+            <article class="bg-blue-900 text-white p-8 rounded-lg max-w-lg">
+                <h1 class="text-4xl font-bold mb-4">Our Achievements</h1>
+                <p class="leading-relaxed">
+                    At ProtectHer, we take pride in our accomplishments in advancing women's and children's safety. Our achievements include the development of innovative safety analytics tools, successful partnerships with community organizations, and impactful awareness campaigns. We have received recognition for our contributions to safety technology and have made significant strides in improving safety protocols and interventions.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        const getHelpBtn = document.getElementById('get-help-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        const aboutUsBtn = document.getElementById('about-us-btn');
+        const aboutUsDropdown = document.getElementById('about-us-dropdown');
+
+        getHelpBtn.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        aboutUsBtn.addEventListener('click', () => {
+            aboutUsDropdown.classList.toggle('hidden');
+        });
+
+        window.addEventListener('click', (e) => {
+            if (!getHelpBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+            if (!aboutUsBtn.contains(e.target) && !aboutUsDropdown.contains(e.target)) {
+                aboutUsDropdown.classList.add('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>
