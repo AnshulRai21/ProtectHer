@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('images.jpeg');
+            background-size: cover;
+            background-position: cover;
+            background-repeat: no-repeat;
+        }
+
+        #login-button {
+            align-self: flex-end;
+            margin: 20px;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #login-button:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.5); /* Transparent white */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none; /* Initially hide the container */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input {
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #error-message {
+            color: #ff0000;
+            margin-top: 10px;
+        }
+
+        #forgot-password {
+            text-align: center;
+            margin-top: 15px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <button id="login-button" onclick="showLoginForm();">Login</button>
+
+    <div class="container" id="login-container">
+        <form id="loginForm" onsubmit="validateLogin(); return false;">
+            <h2>Welcome to our Website</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+        <p id="error-message"></p>
+        
+        <div id="forgot-password">
+            <a href="#" onclick="showForgotPasswordModal();">Forgot Password?</a>
+        </div>
+    </div>
+
+    <script> //js
+        function validateLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var errorMessage = document.getElementById('error-message');
+            var loginContainer = document.getElementById('login-container');
+            var loginButton = document.getElementById('login-button');
+
+            // Basic validation, you may want to implement more secure validation
+            if (username === 'yourUsername' && password === 'yourPassword') {
+                alert('Login successful!'); // Replace this with your desired action
+                loginContainer.style.display = 'none'; // Hide the login container
+                loginButton.style.display = 'block';
+                window.location.href = 'content.html'; // Show the login button again
+            } else {
+                errorMessage.textContent = 'Invalid username or password. Please try again.';
+            }
+        }
+
+        function showForgotPasswordModal() {
+            // Implement your logic to show a modal or navigate to the forgot password page
+            alert('Forgot Password functionality is not implemented in this example.');
+        }
+
+        function showLoginForm() {
+            var loginButton = document.getElementById('login-button');
+            loginButton.style.display = 'none'; // Hide the login button
+            var loginContainer = document.getElementById('login-container');
+            loginContainer.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
